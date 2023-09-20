@@ -1,6 +1,7 @@
 package org.vet.management.infraestructure.adapter.out;
 
 import io.quarkus.mongodb.panache.PanacheMongoRepository;
+import jakarta.enterprise.context.ApplicationScoped;
 import org.bson.types.ObjectId;
 import org.vet.management.application.port.out.IVetsRepository;
 import org.vet.management.domain.model.Vets;
@@ -8,7 +9,7 @@ import org.vet.management.domain.model.VetsEntity;
 
 import java.util.List;
 import java.util.Objects;
-
+@ApplicationScoped
 public class VetsRepository implements PanacheMongoRepository<VetsEntity>, IVetsRepository {
   @Override
   public List<Vets> getAllVets() {
