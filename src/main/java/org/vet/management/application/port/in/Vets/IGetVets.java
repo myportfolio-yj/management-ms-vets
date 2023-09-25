@@ -10,13 +10,11 @@ import jakarta.ws.rs.core.Response;
 @Path("/vets")
 public interface IGetVets {
   /**
-   * Este método debe retornar una veterinaria según el ID que le debe llegar como parámetro.
+   * Este método debe retornar todas las veterinarias que están activos
    *
-   * @param idVets Identificador de la veterinaria.
-   * @return Una veterinaria.
+   * @return Una lista de veterinarias.
    */
   @GET
-  @Path("/{idVets}")
   @Produces(MediaType.APPLICATION_JSON)
-  Response getVetsById(@PathParam("idVets") String idVets);
+  Response getVets();
 }
