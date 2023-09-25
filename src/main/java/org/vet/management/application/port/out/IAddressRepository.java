@@ -6,9 +6,9 @@ import org.vet.management.domain.model.AddressEntity;
 import java.util.List;
 
 public interface IAddressRepository {
-  List<AddressEntity> getAllAddresses();
-  AddressEntity getAddressById(String id);
-  AddressEntity createAddress(Address address);
-  AddressEntity updateAddress(String id, Address address);
-  AddressEntity deleteAddress(String id);
+  List<Address> getAllAddresses();
+  Address getAddressById(String id);
+  Address createAddress(Address address);
+  Address updateAddress(String id, Address address);
+  Address deleteAddress(String id);
 }
